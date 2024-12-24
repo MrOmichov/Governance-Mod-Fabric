@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "governancemod",
+	"version": "${version}",
+	"name": "Governance Mod",
+	"description": "This is Governance Mod made by MrOmichov. It is supposed to allow you to control everything.",
+	"authors": [
+		"Me!",
+		"MrOmichov"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/governancemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.mromichov.governancemod.GovernanceMod"
+		],
+		"client": [
+			"org.mromichov.governancemod.GovernanceModClient"
+		],
+		"fabric-datagen": [
+			"org.mromichov.governancemod.GovernanceModDataGenerator"
+		]
+	},
+	"mixins": [
+		"governancemod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
